@@ -10,7 +10,7 @@ def run_command(command):
         # Handling errors
         print(f"Error:\n{e.stderr}")
 
-def update_and_upgrade():update_and_upgrade
+def update_and_upgrade():
     # Update the package list
     print("Running apt update...")
     #calls function run command with sudo
