@@ -1,4 +1,4 @@
-# Apt Update and Upgrade Script
+# CLI tools
 
 This repository contains CLI tools focused on:
 - **Document inspection** (e.g., special character detection in `.docx` files)
