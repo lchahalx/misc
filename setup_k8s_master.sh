@@ -27,6 +27,11 @@ echo "Configuring containerd..."
 sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml > /dev/null
 sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/' /etc/containerd/config.toml
+grep -q 'SystemdCgroup = true' /etc/containerd/config.toml || {
+    echo "ERROR: Failed to set SystemdCgroup = true in containerd config."
+    exit 1
+}
+
 sudo systemctl restart containerd
 
 echo "Loading kernel modules..."
